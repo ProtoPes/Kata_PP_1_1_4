@@ -16,6 +16,7 @@ public class Main {
         test.saveUser("Michelangelo", "Buonarroti Simoni", (byte) 88);
         test.saveUser("Raffaello", "Santi", (byte) 37);
 
+        test.removeUserById(2);
         List<User> users = test.getAllUsers();
         users.forEach(System.out::println);
 
