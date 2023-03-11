@@ -3,13 +3,11 @@ package jm.task.core.jdbc;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
-import jm.task.core.jdbc.util.Util;
 
-import java.sql.*;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         UserService test = new UserServiceImpl();
         test.createUsersTable();
 
@@ -23,6 +21,5 @@ public class Main {
 
         test.cleanUsersTable();
         test.dropUsersTable();
-        Util.closeConn();
     }
 }
